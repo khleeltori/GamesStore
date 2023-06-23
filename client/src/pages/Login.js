@@ -170,19 +170,20 @@ const Login = props => {
 
     return(
         <>
-        <Container>
+        <div style={{height:"100vh",backgroundColor:"#393646"}}>
+        <Container >
             <ToastContainer />
             <Row>
                 <Col xl={4}></Col>
                 <Col xl={4} style={{
                     marginTop:100, 
                     padding:50, textAlign:'center',
-                    backgroundColor:'#ffffff', borderRadius:20}}>
+                    backgroundColor:'#4F4557', borderRadius:20}}>
 
 
                     <img 
                         src="../../logo.png"
-                        style={{width:200}} 
+                        style={{marginTop:-70,width:220}} 
                         alt="logo"
                     />
 
@@ -190,23 +191,23 @@ const Login = props => {
                     {
                         authView === 'loginView' ? (
                             <>
-                                <h3 style={{marginTop:15}}>Welcome Aboard</h3>
+                                <h3 style={{marginTop:-15}}>Welcome Aboard</h3>
                                 <p>Type your email and password to login</p>
                                 <Form>
                                     <Form.Group>
                                         <Form.Label>Email address</Form.Label>
-                                        <Form.Control type="email" value={email} onChange={(e) => {setEmail(e.target.value)}} />
+                                        <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="email" value={email} onChange={(e) => {setEmail(e.target.value)}} />
                                     </Form.Group>
 
                                     <Form.Group>
                                         <Form.Label>Password</Form.Label>
-                                        <Form.Control type="password" value={password} onChange={(e) => {setPassword(e.target.value)}} />
+                                        <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="password" value={password} onChange={(e) => {setPassword(e.target.value)}} />
                                     </Form.Group>
 
-                                    <Button variant="primary" style={{width:'100%', marginTop:15}} onClick={login}>Sign In</Button>
-                                    <button className="forget-password-button" onClick={() => setAuthView("forgetPassword")}>Forget Password?</button>
+                                    <Button variant="primary" style={{width:'100%', marginTop:15,backgroundColor:"#F4EEE0",color:"black",borderStyle:"none"}} onClick={login}>Sign In</Button>
+                                    <button style={{backgroundColor:"#F4EEE0",color:"black",borderStyle:"none"}}  className="forget-password-button" onClick={() => setAuthView("forgetPassword")}>Forget Password?</button>
                                 </Form>
-                                <Button style={{marginTop:12}} variant="light" onClick={() => {setAuthView("registerView")}}>Don't have an account? Signup Now!</Button>
+                                <Button style={{marginTop:12,backgroundColor:"#F4EEE0",borderStyle:"none"}} variant="light" onClick={() => {setAuthView("registerView")}}>Don't have an account? Signup Now!</Button>
                                 
                             </>
                         )
@@ -299,7 +300,7 @@ const Login = props => {
                 <Col xl={4}></Col>
             </Row>
         </Container>
-        
+        </div>
         </>
 
     )

@@ -63,6 +63,7 @@ const Dashboard = props => {
 
     return (
         <>
+        <div style={{backgroundColor:"#435B66",height:'100vh'}}>
             <div style={{
                 display: "grid",
             }}>
@@ -102,6 +103,7 @@ const Dashboard = props => {
                                 )
                     }
                 </div>
+            </div>
             </div>
         </>
     )

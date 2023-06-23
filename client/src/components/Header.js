@@ -41,7 +41,7 @@ const Header = ({
 
     return(
         <>
-        <Navbar variant="dark" bg="light" expand="lg" >
+        <Navbar style={{backgroundColor:'#2D4356',marginTop:-30}}>
             <Container fluid>
                 <Navbar.Collapse id="navbar-dark-example">
                     <Navbar.Brand href="/dashboard">
@@ -51,7 +51,7 @@ const Header = ({
                             <AiFillHome
                                 color="#EE621A"
                                 size={"20px"}
-                                style={{ marginRight:"5px" }}
+                                style={{ marginRight:"5px"}}
                             />
                             <Link style={{ textDecoration:"none", color: "#EE621A", }}  to="/dashboard" relative="path">
                                 Home
@@ -104,14 +104,8 @@ const Header = ({
                     flexDirection:"row" 
                 }}  id="navbar-dark-example">
                     <Button 
-                        variant="dark"
-                        style={{
-                            width:"120px",
-                            display:"flex",
-                            flexDirection:"row",
-                            alignItems:"center",
-                            justifyContent:"space-evenly"
-                        }}
+                        className="logOutCN"
+                        style={{borderStyle:"none",backgroundColor:"#EAB2A0",width:"120px",display:"flex",alignItems:"center",justifyContent:"space-evenly"}}
                         onClick={logout}
                     >
                         <AiOutlineLogin
@@ -126,11 +120,12 @@ const Header = ({
         
         {
             isItDashBoard && 
-            <Navbar variant="light" bg="light" expand="lg">
+            <Navbar style={{backgroundColor:'#2D4356'}}>
                 <Container fluid>
                     <Navbar.Collapse id="navbar-dark-example">
                     <Nav style={{
                         width:"100%",
+                        marginTop:-30,
                         justifyContent:"space-evenly"
 
                     }}>
@@ -138,7 +133,8 @@ const Header = ({
                             type="text"
                             placeholder="Search..."
                             style={{
-                                width:"70%"
+                                width:"70%",
+                                backgroundColor:"lightgrey"
                             }}
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
@@ -150,10 +146,8 @@ const Header = ({
                             justifyContent:"space-evenly"
                         }}>
                             <NavDropdown
-                                id="nav-dropdown-dark-example"
                                 title={categoryiFilter}
-                                menuVariant="light"
-                                style={{ border: "1px solid grey" }}
+                                style={{ backgroundColor:"lightgrey"}}
                             >
                                 <NavDropdown.Item onClick={() => setCategoryFilter("Choose Category")}>Choose Category</NavDropdown.Item>    
                                 {
@@ -165,10 +159,8 @@ const Header = ({
                             </NavDropdown>
 
                             <NavDropdown
-                                id="nav-dropdown-dark-example"
                                 title={priceFilter}
-                                menuVariant="light"
-                                style={{ border: "1px solid grey" }}
+                                style={{ backgroundColor:"lightgrey" }}
                             >
                                 <NavDropdown.Item onClick={() => setPriceFilter("Choose Price Range")}>Choose Price Range</NavDropdown.Item>
                                 <NavDropdown.Item onClick={() => setPriceFilter("Low to High")}>Low to High</NavDropdown.Item>    
