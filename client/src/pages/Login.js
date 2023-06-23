@@ -204,10 +204,10 @@ const Login = props => {
                                         <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="password" value={password} onChange={(e) => {setPassword(e.target.value)}} />
                                     </Form.Group>
 
-                                    <Button variant="primary" style={{width:'100%', marginTop:15,backgroundColor:"#F4EEE0",color:"black",borderStyle:"none"}} onClick={login}>Sign In</Button>
-                                    <button style={{backgroundColor:"#F4EEE0",color:"black",borderStyle:"none"}}  className="forget-password-button" onClick={() => setAuthView("forgetPassword")}>Forget Password?</button>
+                                    <Button variant="primary" style={{width:'100%', marginTop:15,backgroundColor:"#9DB2BF",color:"black",borderStyle:"none"}} onClick={login}>Sign In</Button>
+                                    <button style={{backgroundColor:"#9DB2BF",color:"black",borderStyle:"none"}}  className="forget-password-button" onClick={() => setAuthView("forgetPassword")}>Forget Password?</button>
                                 </Form>
-                                <Button style={{marginTop:12,backgroundColor:"#F4EEE0",borderStyle:"none"}} variant="light" onClick={() => {setAuthView("registerView")}}>Don't have an account? Signup Now!</Button>
+                                <Button style={{marginTop:12,backgroundColor:"#9DB2BF",borderStyle:"none"}} variant="light" onClick={() => {setAuthView("registerView")}}>Don't have an account? Signup Now!</Button>
                                 
                             </>
                         )
@@ -219,32 +219,32 @@ const Login = props => {
                                 <Form>
                                     <Form.Group>
                                         <Form.Label>First name</Form.Label>
-                                        <Form.Control type="text" value={firstName} onChange={(e) => {setFirstName(e.target.value)}} />
+                                        <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="text" value={firstName} onChange={(e) => {setFirstName(e.target.value)}} />
                                     </Form.Group>
 
                                     <Form.Group>
                                         <Form.Label>Last name</Form.Label>
-                                        <Form.Control type="text" value={lastName} onChange={(e) => {setLastName(e.target.value)}} />
+                                        <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="text" value={lastName} onChange={(e) => {setLastName(e.target.value)}} />
                                     </Form.Group>
 
                                     <Form.Group>
                                         <Form.Label>Mobile</Form.Label>
-                                        <Form.Control type="text" value={mobile} onChange={(e) => {setMobile(e.target.value)}} />
+                                        <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="text" value={mobile} onChange={(e) => {setMobile(e.target.value)}} />
                                     </Form.Group>
 
                                     <Form.Group>
                                         <Form.Label>Email address</Form.Label>
-                                        <Form.Control type="email" value={email} onChange={(e) => {setEmail(e.target.value)}} />
+                                        <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="email" value={email} onChange={(e) => {setEmail(e.target.value)}} />
                                     </Form.Group>
 
                                     <Form.Group>
                                         <Form.Label>Password</Form.Label>
-                                        <Form.Control type="password" value={password} onChange={(e) => {setPassword(e.target.value)}} />
+                                        <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="password" value={password} onChange={(e) => {setPassword(e.target.value)}} />
                                     </Form.Group>
 
-                                    <Button variant="primary" style={{width:'100%', marginTop:15}} onClick={createNewAccount}>Sign Up</Button>
+                                    <Button variant="primary" style={{width:'100%', marginTop:15,backgroundColor:"#9DB2BF",color:"black",borderStyle:"none"}}  nClick={createNewAccount}>Sign Up</Button>
                                 </Form>
-                                <Button style={{marginTop:12}} variant="light" onClick={() => {setAuthView("loginView")}}>Back to login</Button>
+                                <Button style={{marginTop:12,backgroundColor:"#9DB2BF",borderStyle:"none"}} variant="light" onClick={() => {setAuthView("loginView")}}>Back to login</Button>
                             </>
                         )
                         :
@@ -255,12 +255,12 @@ const Login = props => {
                                 <Form>
                                     <Form.Group>
                                         <Form.Label>Code</Form.Label>
-                                        <Form.Control type="text" value={code} onChange={(e) => {setCode(e.target.value)}} />
+                                        <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="text" value={code} onChange={(e) => {setCode(e.target.value)}} />
                                     </Form.Group>
-                                    <Button variant="primary" style={{width:'100%', marginTop:15}} onClick={verifyMyCode}>Verify</Button>
-                                    <Button variant="warning" style={{width:'100%', marginTop:15}} onClick={regenrateVerificationCode}>send new code</Button>
+                                    <Button variant="primary" style={{width:'100%', marginTop:15,backgroundColor:"#9DB2BF",borderStyle:"none",color:'black'}} onClick={verifyMyCode}>Verify</Button>
+                                    <Button variant="warning" style={{width:'100%', marginTop:15,backgroundColor:"#9DB2BF",borderStyle:"none"}} onClick={regenrateVerificationCode}>send new code</Button>
                                 </Form>
-                                <Button style={{marginTop:12}} variant="light" onClick={() => {setAuthView("loginView")}}>Back to login</Button>
+                                <Button style={{marginTop:12,backgroundColor:"#9DB2BF",borderStyle:"none",color:'black'}} variant="light" onClick={() => {setAuthView("loginView")}}>Back to login</Button>
                         </>)
                         :
                         (
@@ -273,10 +273,10 @@ const Login = props => {
                                         <Form.Group>
                                             <Form.Group>
                                             <Form.Label>Please Choos New Password</Form.Label>
-                                                <Form.Control className="forget-password-control" type="password" value={newPassword} placeholder="Type New Password..." onChange={(e) => {setNewPassword(e.target.value)}} />
-                                                <Form.Control className="forget-password-control" type="password" value={verifyNewPassword} placeholder="ReType New Password..." onChange={(e) => {setVerifyNewSound(e.target.value)}} />
+                                                <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}}  type="password" value={newPassword} placeholder="Type New Password..." onChange={(e) => {setNewPassword(e.target.value)}} />
+                                                <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} onClick={verifyMyCode} className="forget-password-control" type="password" value={verifyNewPassword} placeholder="ReType New Password..." onChange={(e) => {setVerifyNewSound(e.target.value)}} />
                                             </Form.Group>
-                                            <Button variant="primary" style={{width:'100%', marginTop:15}} onClick={changePassword}>change password</Button>
+                                            <Button variant="primary" style={{width:'100%', marginTop:15,backgroundColor:"#9DB2BF",borderStyle:"none",color:'black'}} onClick={changePassword}>change password</Button>
                                         </Form.Group>
                                     )
                                     :
@@ -284,9 +284,9 @@ const Login = props => {
                                         <>
                                             <Form.Group>
                                                 <Form.Label>Please Enter Your Email</Form.Label>
-                                                <Form.Control type="text" value={email} placeholder="example@email.com" onChange={(e) => {setEmail(e.target.value)}} />
+                                                <Form.Control style={{backgroundColor:"#6D5D6E",color:"black",borderStyle:"none"}} type="text" value={email} placeholder="example@email.com" onChange={(e) => {setEmail(e.target.value)}} />
                                             </Form.Group>
-                                            <Button variant="primary" style={{width:'100%', marginTop:15}} onClick={requestToChangePassword}>Reset</Button>
+                                            <Button variant="primary" style={{width:'100%', marginTop:15,backgroundColor:"#9DB2BF",borderStyle:"none",color:'black'}} onClick={requestToChangePassword}>Reset</Button>
                                         </>
                                     )
                                    }
